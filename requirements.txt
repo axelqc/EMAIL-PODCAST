@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+pydantic[email]
+python-dotenv
+ibm-db
+ibm-db-sa
+pandas
