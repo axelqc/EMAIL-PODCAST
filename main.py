@@ -103,7 +103,7 @@ Ally, Vale y Axel 🐝
 @app.post("/suscribirse", status_code=status.HTTP_201_CREATED)
 async def suscribirse(
     payload: SuscripcionPayload,
-    conn: ibm_db_dbi.Connection = Depends(get_db_connection)
+    #conn: ibm_db_dbi.Connection = Depends(get_db_connection) conectar a db para subir nuevo subscriptor
 ):
     """
     Guarda el suscriptor en Db2 y envía un correo de bienvenida.
