@@ -108,14 +108,15 @@ async def suscribirse(
     """
     Guarda el suscriptor en Db2 y envía un correo de bienvenida.
     """
-    try:
-        guardar_suscriptor(payload.nombre, payload.email, conn)
-    except Exception:
-        print(traceback.format_exc())
-        raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="No se pudo guardar la suscripción. Intenta de nuevo."
-        )
+    #try:
+        #guardar_suscriptor(payload.nombre, payload.email, conn)
+    #    pass
+    #except Exception:
+    #    print(traceback.format_exc())
+    #    raise HTTPException(
+    #        status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+    #        detail="No se pudo guardar la suscripción. Intenta de nuevo."
+    #    )
 
     try:
         enviar_bienvenida(payload.nombre, payload.email)
